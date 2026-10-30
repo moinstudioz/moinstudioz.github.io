@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Moin Studioz | Grow Your Business Online with Websites and Apps</title><meta name="description" content="Websites, apps and social media marketing for businesses. Standard projects from PKR 4,000.">
+<meta name="theme-color" content="#05060f">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Moin Studioz | Grow Your Business Online with Websites and Apps">
+<meta property="og:description" content="Websites, apps and social media marketing for businesses. Standard projects from PKR 4,000.">
+<meta property="og:site_name" content="Moin Studioz">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%2305060f'/%3E%3Cpath d='M4 19V6.5c0-1 1-1.5 1.8-.9L12 10.5l6.200-4.900c.8-.6 1.800-.1 1.800.9V19l-4-2.600V11l-4 3-4-3v5.400z' fill='%232f6bff'/%3E%3C/svg%3E">
+<style>
+/* ---------- Design tokens: change colours, spacing and type here ---------- */
+:root{
+  --bg:#05060f; --bg2:#0b0d1c; --card:rgba(255,255,255,.045); --line:rgba(255,255,255,.11);
+  --text:#eef0ff; --mute:#a7adcc;
+  --c1:#00e5ff; --c2:#2f6bff; --c3:#8b2cff;
+  --grad:linear-gradient(110deg,var(--c1),var(--c2) 50%,var(--c3));
+  --btn:linear-gradient(110deg,#2f6bff,#8b2cff);
+  --r:20px; --gap:clamp(1rem,2.5vw,1.5rem); --sec:clamp(4rem,9vw,7rem);
+  --font:"Segoe UI",system-ui,-apple-system,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Consolas,monospace;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+body{font:400 1rem/1.65 var(--font);background:var(--bg);color:var(--text);overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;background:
+  radial-gradient(60rem 30rem at 85% -5%,rgba(139,44,255,.22),transparent 60%),
+  radial-gradient(50rem 30rem at -10% 25%,rgba(47,107,255,.16),transparent 60%)}
+a{color:inherit}
+img,svg{max-width:100%}
+:focus-visible{outline:2px solid var(--c1);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:.5rem;background:#fff;color:#000;padding:.5rem 1rem;border-radius:8px;z-index:100}
+.skip:focus{left:.5rem}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+section{padding-block:var(--sec)}
+h1,h2,h3{line-height:1.12;letter-spacing:-.02em}
+h2{font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:.9rem;max-width:20ch}
+.lead{color:var(--mute);max-width:58ch;font-size:1.08rem}
+.head{margin-bottom:clamp(2rem,5vw,3.2rem)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:1.6rem;backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);transition:transform .3s,border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-5px);border-color:rgba(0,229,255,.45);box-shadow:0 14px 40px -14px rgba(47,107,255,.55)}
+.ico{width:3rem;height:3rem;border-radius:14px;display:grid;place-items:center;margin-bottom:1.1rem;background:linear-gradient(135deg,rgba(0,229,255,.18),rgba(139,44,255,.22));border:1px solid var(--line)}
+.ico svg{width:1.5rem;height:1.5rem;fill:none;stroke:var(--c1);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:1.2rem;margin-bottom:.5rem}
+.card p{color:var(--mute);font-size:.98rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.85rem 1.6rem;border-radius:999px;font:600 1rem var(--font);text-decoration:none;cursor:pointer;border:1px solid transparent;transition:transform .25s,box-shadow .25s,background .25s;min-height:48px}
+.btn.p{background:var(--btn);color:#fff;box-shadow:0 8px 28px -8px rgba(105,60,255,.8)}
+.btn.p:hover{transform:translateY(-2px);box-shadow:0 12px 34px -6px rgba(105,60,255,.95)}
+.btn.g{background:rgba(255,255,255,.05);border-color:var(--line);color:var(--text)}
+.btn.g:hover{background:rgba(255,255,255,.1);border-color:var(--c1)}
+.row{display:flex;flex-wrap:wrap;gap:.9rem}
+.grid{display:grid;gap:var(--gap)}
+
+/* ---------- Header / nav ---------- */
+header{position:sticky;top:0;z-index:50;background:rgba(5,6,15,.78);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:68px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-weight:800;letter-spacing:.04em}
+.brand svg{width:34px;height:34px}
+.brand span{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.burger{width:48px;height:48px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.05);color:var(--text);cursor:pointer;display:grid;place-items:center}
+.burger svg{width:24px;height:24px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round}
+.burger .x{display:none}.burger[aria-expanded=true] .x{display:block}.burger[aria-expanded=true] .m{display:none}
+#menu{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;gap:.25rem;padding:1rem 1.25rem 1.5rem;background:rgba(8,9,22,.97);border-bottom:1px solid var(--line)}
+#menu.open{display:flex}
+#menu a{text-decoration:none;color:var(--mute);padding:.8rem .5rem;border-radius:10px;font-weight:500}
+#menu a:hover{color:#fff}
+#menu .btn{margin-top:.5rem;color:#fff}
+@media(min-width:960px){
+  .burger{display:none}
+  #menu,#menu.open{display:flex;position:static;flex-direction:row;align-items:center;gap:.2rem;padding:0;background:none;border:0}
+  #menu a{padding:.5rem .8rem}
+  #menu .btn{margin:0 0 0 .5rem;padding:.55rem 1.2rem;min-height:44px}
+}
+
+/* ---------- Hero ---------- */
+.hero{padding-block:clamp(3rem,8vw,6rem) var(--sec)}
+.hero .wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:3rem;align-items:center}
+.word{font-weight:800;font-size:clamp(1.05rem,2.6vw,1.35rem);letter-spacing:.34em;margin-bottom:1.4rem;display:flex;gap:.9ch;flex-wrap:wrap}
+.word b{color:#fff}.word i{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+h1{font-size:clamp(2.5rem,7vw,4.6rem);font-weight:800;margin-bottom:1.3rem}
+h1 span{display:block}
+.hero .lead{margin-bottom:2rem}
+.note{margin-top:1.4rem;color:var(--mute);font-size:.92rem}
+.note b{color:var(--c1);font-weight:600}
+.scene{position:relative;padding:1.8rem 0 0}
+.win{border-radius:var(--r);border:1px solid var(--line);background:linear-gradient(160deg,rgba(255,255,255,.08),rgba(255,255,255,.02));backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);box-shadow:0 30px 80px -30px rgba(95,60,255,.65),0 0 0 1px rgba(0,229,255,.06);overflow:hidden}
+.dots{display:flex;gap:.4rem;padding:.85rem 1rem;border-bottom:1px solid var(--line)}
+.dots i{width:.65rem;height:.65rem;border-radius:50%;background:rgba(255,255,255,.2)}
+.win pre{padding:1.2rem 1.3rem 1.5rem;font:.86rem/1.8 var(--mono);overflow-x:auto;color:#cfd4f5}
+.k{color:#c58bff}.s{color:#5cf0ff}.f{color:#7fa3ff}.c{color:#8087ad}
+.px{position:absolute;border-radius:5px;background:linear-gradient(135deg,var(--c2),var(--c3));box-shadow:0 0 24px rgba(105,60,255,.6);animation:bob 6s ease-in-out infinite}
+.px.a{width:34px;height:34px;right:-4px;top:-4px}.px.b{width:22px;height:22px;right:44px;top:-14px;animation-delay:-2s}
+.px.c{width:14px;height:14px;right:-12px;top:44px;animation-delay:-4s;background:var(--c1)}
+@keyframes bob{50%{transform:translateY(-8px)}}
+@media(min-width:900px){.hero .wrap{grid-template-columns:1.1fr .9fr}}
+
+/* ---------- Services ---------- */
+.services{grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr))}
+
+/* ---------- Pricing ---------- */
+.price-wrap{display:grid;grid-template-columns:minmax(0,1fr);gap:var(--gap)}
+@media(min-width:860px){.price-wrap{grid-template-columns:1.1fr .9fr}}
+.price{position:relative;border-color:rgba(139,44,255,.55);background:linear-gradient(160deg,rgba(47,107,255,.16),rgba(139,44,255,.12))}
+.price small{color:var(--mute)}
+.amt{font-size:clamp(2rem,6vw,3.2rem);font-weight:800;letter-spacing:-.03em;margin:.4rem 0 1rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1.1}
+.ticks{list-style:none;padding:0;display:grid;gap:.6rem;margin:1.2rem 0 1.6rem}
+.ticks li{display:flex;gap:.65rem;color:var(--mute);font-size:.98rem}
+.ticks svg{flex:none;width:1.2rem;height:1.2rem;margin-top:.25rem;fill:none;stroke:var(--c1);stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+.excl{margin-top:var(--gap);border-style:dashed}
+.excl strong{color:#fff}
+
+/* ---------- Portfolio ---------- */
+.work{grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr))}
+.proj{padding:1rem 1rem 1.4rem}
+.prev{border-radius:14px;background:linear-gradient(160deg,#12152e,#0a0b1a);border:1px solid var(--line);margin-bottom:1rem;overflow:hidden}
+.prev svg{display:block;width:100%;height:auto}
+.tag{display:inline-block;font-size:.78rem;font-weight:600;color:var(--c1);border:1px solid rgba(0,229,255,.35);border-radius:999px;padding:.1rem .7rem;margin-bottom:.6rem}
+.proj h3,.proj p,.proj .tag{margin-inline:.4rem}.proj .tag{margin-inline-start:.4rem}
+
+/* ---------- Why / Process ---------- */
+.why{grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.why .card{display:flex;gap:1rem;align-items:flex-start;padding:1.3rem}
+.why .ico{margin:0;flex:none;width:2.6rem;height:2.6rem}
+.why h3{font-size:1.05rem;margin-bottom:.2rem}
+.steps{list-style:none;padding:0;counter-reset:s;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}
+.steps li{counter-increment:s;position:relative;padding-top:4.2rem}
+.steps li::before{content:counter(s);position:absolute;top:1.4rem;left:1.6rem;width:2.4rem;height:2.4rem;border-radius:50%;display:grid;place-items:center;font-weight:700;background:var(--btn);box-shadow:0 0 22px rgba(105,60,255,.6)}
+.steps h3{font-size:1.1rem;margin-bottom:.4rem}
+
+/* ---------- About ---------- */
+.about{display:grid;grid-template-columns:minmax(0,1fr);gap:2.5rem;align-items:center}
+@media(min-width:860px){.about{grid-template-columns:.8fr 1.2fr}}
+.avatar{max-width:340px;width:100%;margin-inline:auto;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 40%,rgba(47,107,255,.35),rgba(139,44,255,.15) 60%,transparent 72%);border:1px solid var(--line);display:grid;place-items:center;box-shadow:0 0 80px -20px rgba(105,60,255,.7)}
+.avatar svg{width:78%}
+
+/* ---------- Contact ---------- */
+.contact{display:grid;grid-template-columns:minmax(0,1fr);gap:2rem}
+@media(min-width:900px){.contact{grid-template-columns:.85fr 1.15fr;align-items:start}}
+.ways{display:grid;gap:.8rem;margin-top:1.8rem}
+.ways a{display:flex;flex-direction:column;text-decoration:none;padding:1rem 1.2rem;border:1px solid var(--line);border-radius:16px;background:var(--card);overflow-wrap:anywhere;transition:border-color .25s}
+.ways a:hover{border-color:var(--c1)}
+.ways small{color:var(--mute)}
+form.card:hover{transform:none;box-shadow:none;border-color:var(--line)}
+.fld{margin-bottom:1.1rem}
+label{display:block;font-weight:600;font-size:.95rem;margin-bottom:.4rem}
+input,select,textarea{width:100%;font:inherit;color:var(--text);background:rgba(5,6,15,.7);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:.8rem 1rem;min-height:48px}
+textarea{min-height:130px;resize:vertical}
+select option{background:#0b0d1c}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--c1);outline-offset:1px;border-color:transparent}
+[aria-invalid=true]{border-color:#ff7b8f}
+.err{display:block;color:#ff9aa9;font-size:.86rem;min-height:0;margin-top:.3rem}
+.two{display:grid;grid-template-columns:minmax(0,1fr);gap:0 1rem}
+@media(min-width:600px){.two{grid-template-columns:1fr 1fr}}
+.status{margin-top:1rem;font-size:.95rem;border-radius:12px;padding:0 1rem}
+.status:not(:empty){padding:.8rem 1rem}
+.status.ok{background:rgba(0,229,255,.1);border:1px solid rgba(0,229,255,.4)}
+.status.bad{background:rgba(255,123,143,.1);border:1px solid rgba(255,123,143,.5)}
+.fine{color:var(--mute);font-size:.86rem;margin-top:1rem}
+
+/* ---------- Footer ---------- */
+footer{border-top:1px solid var(--line);padding-block:3rem 2rem;background:var(--bg2)}
+.fgrid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fit,minmax(180px,1fr))}
+.fgrid>:first-child{grid-column:1/-1}
+@media(min-width:760px){.fgrid>:first-child{grid-column:auto}.fgrid{grid-template-columns:1.6fr 1fr 1fr 1fr}}
+footer h3{font-size:.95rem;margin-bottom:.8rem}
+footer ul{list-style:none;padding:0;display:grid;gap:.45rem}
+footer a{color:var(--mute);text-decoration:none;overflow-wrap:anywhere}footer a:hover{color:#fff;text-decoration:underline}
+footer p{color:var(--mute);font-size:.95rem;max-width:36ch;margin-top:.8rem}
+.copy{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:.5rem;color:var(--mute);font-size:.88rem}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .card:hover,.btn.p:hover{transform:none}
+}
+
+/* ===== multi-page additions ===== */
+.hero .wrap>*,.about>*,.contact>*,.price-wrap>*,.two>*{min-width:0}
+.phead h1,.head h1,.about h1,.contact h1{font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:.9rem;max-width:20ch}
+.phead h1{max-width:24ch}
+#menu a[aria-current=page]{color:#fff;background:rgba(255,255,255,.08)}
+.sub{font-size:clamp(1.1rem,3vw,1.4rem);font-weight:600;color:var(--c1);margin-bottom:1rem}
+.tight{padding-block:0}
+.phead{padding-block:clamp(3rem,8vw,5rem) 0}
+.phead+section{padding-top:clamp(2rem,5vw,3.5rem)}
+.strip{display:flex;flex-wrap:wrap;gap:.4rem 1.2rem;align-items:center;justify-content:space-between;padding:1rem 1.4rem;border-radius:18px;text-decoration:none;border:1px solid rgba(0,229,255,.4);background:linear-gradient(110deg,rgba(0,229,255,.1),rgba(139,44,255,.16))}
+.strip b{font-variant-numeric:tabular-nums;color:var(--c1)}.strip em{font-style:normal;font-weight:600}
+.url{display:inline-flex;align-items:center;gap:.6rem;padding:.7rem 1.2rem;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.05);font:600 clamp(1rem,3.5vw,1.3rem) var(--mono);margin-bottom:1.4rem}
+.url svg{width:1.1rem;height:1.1rem;stroke:var(--c1);fill:none;stroke-width:2}
+.url::after{content:"";width:2px;height:1.2em;background:var(--c1);animation:blink 1.1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+.offer{max-width:640px;margin-top:1.8rem;border-color:rgba(0,229,255,.45)}
+.big{font-size:clamp(1.6rem,7vw,3rem);font-weight:800;font-variant-numeric:tabular-nums;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin:.3rem 0 .8rem;line-height:1.15}
+.chips{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:1.2rem}
+.chip{padding:.45rem 1rem;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.05);font:600 .95rem var(--mono)}
+.cta{text-align:center;padding:clamp(2rem,6vw,3.5rem) 1.5rem;border-radius:28px;border:1px solid rgba(139,44,255,.5);background:linear-gradient(135deg,rgba(47,107,255,.22),rgba(139,44,255,.2))}
+.cta h2{margin-inline:auto;max-width:18ch}.cta .lead{margin:0 auto 1.6rem}.cta .row{justify-content:center}
+.avatar{position:relative;overflow:hidden}
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+@media(min-width:760px){.fgrid{grid-template-columns:1.6fr 1fr 1fr}}
+
+/* ---------- Contact: big editable website name ---------- */
+.dom{padding-block:clamp(2.5rem,7vw,4.5rem) 0;text-align:center}
+.dom-kicker{display:inline-flex;align-items:center;gap:.6rem;font-size:.85rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--c1);margin-bottom:.9rem}
+.dom-kicker i{width:.65rem;height:.65rem;border-radius:50%;background:var(--c1);animation:ping 1.5s ease-out infinite}
+.dom h2{max-width:none;text-align:center;font-size:clamp(1.5rem,4.2vw,2.5rem);font-weight:800;line-height:1.15;margin-bottom:1.6rem}
+.dom-box{position:relative;display:flex;align-items:center;gap:clamp(.6rem,2vw,1.2rem);max-width:1000px;margin-inline:auto;padding:clamp(1.1rem,3.5vw,2rem) clamp(1rem,3vw,2.2rem);border:3px solid transparent;border-radius:28px;cursor:text;
+  background:linear-gradient(var(--bg2),var(--bg2)) padding-box,linear-gradient(110deg,var(--c1),var(--c2),var(--c3),var(--c1)) border-box;background-size:100% 100%,300% 100%;
+  animation:domslide 5s linear infinite,domglow 2.4s ease-in-out infinite}
+.dom-box:focus-within{outline:3px solid #fff;outline-offset:4px}
+.dom-lock{flex:none;width:clamp(1.6rem,4vw,2.6rem);height:clamp(1.6rem,4vw,2.6rem);stroke:var(--c1);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.dom-box input{flex:1;min-width:0;width:100%;background:transparent;border:0;outline:0;color:#fff;text-align:left;font:800 clamp(1.6rem,7.6vw,4.2rem)/1.15 var(--mono);letter-spacing:-.02em;text-shadow:0 0 24px rgba(0,229,255,.5);caret-color:var(--c1)}
+.dom-tap{position:absolute;top:-16px;right:clamp(1rem,4vw,2.4rem);padding:.35rem 1rem;border-radius:999px;background:var(--btn);color:#fff;font-size:.85rem;font-weight:700;box-shadow:0 6px 20px rgba(47,107,255,.5);animation:domhop 1.4s ease-in-out infinite}
+.dom-box.touched .dom-tap{display:none}
+.dom-hint{max-width:62ch;margin:1.4rem auto 0;color:var(--mute);font-size:.92rem}
+.dom-hint b{color:var(--c1)}
+@media(max-width:520px){.dom-lock{display:none}}
+@keyframes domslide{to{background-position:0 0,300% 0}}
+@keyframes domglow{0%,100%{box-shadow:0 0 22px rgba(47,107,255,.35)}50%{box-shadow:0 0 52px rgba(139,44,255,.6)}}
+@keyframes domhop{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+@keyframes ping{0%{box-shadow:0 0 0 0 rgba(0,229,255,.7)}100%{box-shadow:0 0 0 12px rgba(0,229,255,0)}}
+@media(prefers-reduced-motion:reduce){.dom-box,.dom-tap,.dom-kicker i{animation:none}}
+
+.page[hidden]{display:none !important}
+
+/* ---------- Customer-conversion enhancements ---------- */
+.hero{padding-top:clamp(3.5rem,9vw,7rem)}
+.hero h1{max-width:14ch;line-height:1.02;letter-spacing:-.055em}
+.hero .lead{font-size:clamp(1.05rem,2vw,1.2rem);max-width:54ch}
+.word{letter-spacing:.24em}
+.proofline{display:flex;flex-wrap:wrap;gap:.65rem 1.15rem;margin-top:1.45rem;color:var(--mute);font-size:.9rem}
+.proofline span{display:inline-flex;align-items:center;gap:.45rem}
+.proofline b{color:#fff;font-weight:650}
+.proofline i{width:.42rem;height:.42rem;border-radius:50%;background:var(--c1);box-shadow:0 0 12px var(--c1)}
+.hero .btn{min-width:168px}
+.hero .btn.p{box-shadow:0 12px 34px -10px rgba(47,107,255,.95)}
+.strip{box-shadow:0 12px 40px -24px rgba(0,229,255,.55)}
+.strip strong{color:#fff}
+.price{box-shadow:0 20px 60px -32px rgba(139,44,255,.85)}
+.price .amt{letter-spacing:-.055em}
+.card h3{letter-spacing:-.015em}
+.cta{box-shadow:0 24px 70px -38px rgba(139,44,255,.8)}
+.cta .lead{max-width:48ch}
+.cta .btn{min-width:180px}
+.contact .card{box-shadow:0 22px 65px -42px rgba(0,229,255,.45)}
+.fine{line-height:1.55}
+@media(max-width:600px){.hero .row{display:grid}.hero .row .btn{width:100%}.proofline{gap:.55rem .8rem}.strip{align-items:flex-start;flex-direction:column}.cta .row{display:grid}.cta .btn{width:100%}}
+
+</style></head>
+<body><a class="skip" href="#main">Skip to content</a>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#00e5ff"/><stop offset=".5" stop-color="#2f6bff"/><stop offset="1" stop-color="#8b2cff"/></linearGradient></defs>
+  <symbol id="i-web" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2.5"/><path d="M3 9h18M7 6.5h.01M10 6.5h.01"/></symbol>
+  <symbol id="i-app" viewBox="0 0 24 24"><path d="M12 3l9 5-9 5-9-5 9-5zM3 13l9 5 9-5"/></symbol>
+  <symbol id="i-and" viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></symbol>
+  <symbol id="i-redo" viewBox="0 0 24 24"><path d="M20 11a8 8 0 0 0-14-4L4 9M4 5v4h4M4 13a8 8 0 0 0 14 4l2-2M20 19v-4h-4"/></symbol>
+  <symbol id="i-ui" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M3 10h18M10 10v11"/></symbol>
+  <symbol id="i-bug" viewBox="0 0 24 24"><path d="M9 9a3 3 0 0 1 6 0v6a3 3 0 0 1-6 0zM3 13h4M17 13h4M4 7l3 2M20 7l-3 2M5 20l3-3M19 20l-3-3"/></symbol>
+  <symbol id="i-ok" viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></symbol>
+<symbol id="i-mega" viewBox="0 0 24 24"><path d="M3 11v2a1 1 0 0 0 1 1h2l5 4V6L6 10H4a1 1 0 0 0-1 1zM15 9a4 4 0 0 1 0 6M18 6.5a8 8 0 0 1 0 11"/></symbol><symbol id="i-code" viewBox="0 0 24 24"><path d="M8 8l-4 4 4 4M16 8l4 4-4 4M13.5 5l-3 14"/></symbol><symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol><symbol id="i-grow" viewBox="0 0 24 24"><path d="M3 20h18M6 16v-5M11 16V6M16 16v-8"/></symbol></svg>
+<header><div class="wrap bar"><a class="brand" href="#home" aria-label="Moin Studioz home">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 19V6.5c0-1 1-1.5 1.8-.9L12 10.5l6.2-4.9c.8-.6 1.8-.1 1.8.9V19l-4-2.6V11l-4 3-4-3v5.400z" fill="url(#g)"/><rect x="18" y="2" width="3.500" height="3.500" rx=".8" fill="#8b2cff"/></svg>
+      <span>MOIN STUDIOZ</span>
+    </a><button class="burger" type="button" aria-expanded="false" aria-controls="menu" aria-label="Open menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path class="m" d="M4 7h16M4 12h16M4 17h16"/><path class="x" d="M6 6l12 12M18 6L6 18"/></svg>
+    </button><nav id="menu" aria-label="Main navigation"><a href="#home">Home</a><a href="#pricing">Pricing</a><a href="#portfolio">Portfolio</a><a href="#contact">Contact</a><a class="btn p" href="#contact">Get a Quote</a></nav></div></header>
+<main id="main">
+<div class="page" data-page="home" hidden>
+<section class="hero" id="top"><div class="wrap"><div>
+<p class="word"><b>MOIN</b><i>STUDIOZ</i></p>
+<h1><span>Turn Your Business Idea Into a Powerful Online Presence.</span></h1>
+<p class="sub">Websites • Apps • Digital Solutions</p>
+<p class="lead">Get a professional website or app that makes your business easier to discover, builds customer confidence, and helps people contact you. Practical digital solutions, built around your goals and budget.</p>
+<div class="row"><a class="btn p" href="#contact">Get My Free Quote</a><a class="btn g js-wa" href="#contact" target="_blank" rel="noopener">Chat on WhatsApp</a></div>
+<p class="note">Professional digital projects <b>starting from PKR 4,000</b>. Clear pricing before work begins.</p><div class="proofline"><span><i></i><b>Mobile-friendly</b> design</span><span><i></i><b>Custom</b> to your needs</span><span><i></i><b>48-hour</b> free fix window*</span></div></div>
+<div class="scene" aria-hidden="true"><i class="px a"></i><i class="px b"></i><i class="px c"></i><div class="win"><div class="dots"><i></i><i></i><i></i></div>
+<pre><code><span class="c">// grow your business online</span>
+<span class="k">const</span> plan = {
+  goal:  <span class="s">"reach new customers"</span>,
+  build: [<span class="s">"website"</span>, <span class="s">"app"</span>],
+  ads:   <span class="s">"your budget + our fee"</span>
+};
+<span class="f">launch</span>(plan);</code></pre></div></div></div></section>
+<section class="tight"><div class="wrap"><a class="strip" href="#pricing"><strong>Give your business a professional online presence</strong><span>Standard projects from <b>PKR 4,000</b> • Offer ends in <b data-countdown></b></span><em>Explore pricing →</em></a></div></section>
+<section><div class="wrap"><div class="head"><h2>Your business deserves more than just a social media page.</h2><p class="lead">Give customers a place to learn about your services, explore what you offer, and contact you whenever they are ready.</p></div>
+<div class="grid services"><article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-web"/></svg></div><h3>Look professional online</h3><p>A polished, mobile-friendly website that explains what you offer and makes it easy for customers to reach you.</p></article><article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-mega"/></svg></div><h3>Make it easier to get enquiries</h3><p>Clear calls to action and simple contact options help interested visitors take the next step.</p></article><article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-shield"/></svg></div><h3>Know what happens after delivery</h3><p>Website projects and bug fixes include a 48-hour free fix window after delivery. New features are quoted separately.</p></article></div>
+<p style="margin-top:2rem"><a class="btn g" href="#pricing">View services and pricing</a></p></div></section>
+<section id="about"><div class="wrap about"><div class="avatar"><img src="data:image/webp;base64,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" alt="Moin Studioz logo: websites, apps, solutions" width="720" height="720"></div><div><h2>Meet the Developer</h2><p class="lead">I'm Moin, the developer behind Moin Studioz. I create websites and applications tailored to each client's needs, focusing on usability, modern design, and practical functionality.</p>
+<div class="row" style="margin-top:1.6rem"><a class="btn p" href="#contact">Work With Me</a></div></div></div></section>
+<section id="why">
+  <div class="wrap">
+    <div class="head"><h2>A straightforward way to get your project built.</h2><p class="lead">No confusing packages. We discuss what you need, agree on the price, and build to the agreed scope.</p></div>
+    <div class="grid why">
+      <article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-ok"/></svg></div><div><h3>Modern and responsive design</h3><p>Layouts that look current and work on phones, tablets and desktops.</p></div></article>
+      <article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-ok"/></svg></div><div><h3>Clear project communication</h3><p>You know what is being built and what is agreed at each stage.</p></div></article>
+      <article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-ok"/></svg></div><div><h3>Affordable, requirement-based pricing</h3><p>You pay for what your project needs, quoted before work starts.</p></div></article>
+      <article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-ok"/></svg></div><div><h3>Attention to usability</h3><p>Interfaces that are easy for your visitors and customers to understand.</p></div></article>
+      <article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-ok"/></svg></div><div><h3>Customised solutions</h3><p>Built around your requirements instead of reused from a template.</p></div></article>
+      <article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-ok"/></svg></div><div><h3>Support and improvements as agreed</h3><p>Follow-up help and updates, defined in your quotation.</p></div></article>
+    </div>
+  </div>
+</section>
+<section class="ctas"><div class="wrap"><div class="cta"><h2>Ready to take your business online?</h2><p class="lead">Tell me what you have in mind. Get a clear quotation before you decide to start.</p>
+<div class="row"><a class="btn p" href="#contact">Get a Free Quote</a><a class="btn g js-wa" href="#contact" target="_blank" rel="noopener">Message on WhatsApp</a></div></div></div></section>
+</div>
+<div class="page" data-page="pricing" hidden>
+<section class="phead"><div class="wrap">
+<p class="url" aria-hidden="true"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>yourwebsite.com</p>
+<h1>A professional website can start from just PKR 4,000.</h1>
+<p class="lead">Make it easier for customers to discover your business, understand your services, and contact you. Your final price is agreed before development begins.</p>
+<div class="card offer"><strong>Special introductory pricing ends in</strong><div class="big" data-countdown role="timer"></div>
+<p>Eligible standard projects are currently priced at <b>PKR 4,000–8,000</b> until <b data-offer-date></b>. Larger or more complex requirements receive a separate quotation.</p>
+<p style="margin-top:1.2rem"><a class="btn p" href="#contact">Lock In This Price</a></p></div></div></section>
+<section><div class="wrap"><div class="price-wrap">
+<article class="card price"><small>START YOUR PROJECT</small><div class="amt">PKR 4,000–8,000</div>
+<p>A practical starting range for eligible standard projects. Your exact price depends on the features, design, and work involved.</p>
+<ul class="ticks"><li><svg aria-hidden="true"><use href="#i-ok"/></svg>Starting price: PKR 4,000</li><li><svg aria-hidden="true"><use href="#i-ok"/></svg>Quote agreed with you before development starts</li><li><svg aria-hidden="true"><use href="#i-ok"/></svg>48-hour free fix window after delivery</li></ul>
+<a class="btn p" href="#contact">Get a Free Quote</a></article>
+<article class="card"><h3>Custom Quotation</h3><p style="margin-top:.6rem">Need something bigger or more specific? Describe it and I'll prepare a custom quotation for your requirements.</p>
+<p style="margin-top:1rem"><strong>Please note:</strong> larger or more complex projects may cost more than the standard range. The range does not apply to every possible website or application.</p>
+<a class="btn g" style="margin-top:1.4rem" href="#contact">Request a Custom Quote</a></article></div>
+<div class="grid services" style="margin-top:var(--gap)">
+<article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-shield"/></svg></div><h3>48-Hour Free Fix Window</h3><p>Websites and bug fixes come with 48 hours of free fixes after delivery. Any problem with the delivered work is fixed for free in that period. After 48 hours, charges apply.</p><p style="margin-top:.7rem;font-size:.9rem">New features or changes outside the agreed scope are quoted separately.</p></article>
+<article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-mega"/></svg></div><h3>Social Media Marketing</h3><div class="amt" style="font-size:1.5rem;margin:.2rem 0 .6rem">Your Ad Budget + Our Fee</div><p>You set the ad budget and pay it directly to the platform. My management fee is agreed in your quotation before we start. Results depend on your market, offer and budget, so none are guaranteed.</p><a class="btn g" style="margin-top:1.2rem" href="#contact">Ask About Marketing</a></article></div>
+<p class="card excl" style="padding:1.2rem 1.6rem;margin-top:var(--gap)"><strong>Not included unless written in the agreed quotation:</strong> <span style="color:var(--mute)">hosting, domain names, paid APIs and third-party subscriptions.</span></p>
+</div></section>
+<section id="services"><div class="wrap"><div class="head"><h2>Services for growing businesses</h2><p class="lead">Everything you need to get online, reach customers and keep your product working.</p></div>
+<div class="grid services"><article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-web"/></svg></div><h3>Website Development</h3><p>Clean, responsive business websites that work on every screen size.</p></article><article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-app"/></svg></div><h3>Web Application Development</h3><p>Interactive web tools such as calculators, generators and dashboards.</p></article><article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-and"/></svg></div><h3>Android App Development</h3><p>Practical Android apps that turn your idea into something people can install.</p></article><article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-redo"/></svg></div><h3>Website Redesign</h3><p>Refresh an outdated site with a modern look and better mobile experience.</p></article><article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-ui"/></svg></div><h3>UI/UX Design</h3><p>Clear, usable interfaces that make your product easy to understand.</p></article><article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-bug"/></svg></div><h3>Bug Fixing and Improvements</h3><p>Fix broken features and improve existing sites or apps, with 48 hours of free fixes after delivery.</p></article><article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-mega"/></svg></div><h3>Social Media Marketing</h3><p>Reach new customers with ads. You pay your ad budget plus my management fee.</p></article><article class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-code"/></svg></div><h3>Any Programming Language</h3><p>C++, Python, Java and more. Tell me what your project needs.</p></article></div></div></section>
+<section><div class="wrap"><div class="card"><div class="ico"><svg aria-hidden="true"><use href="#i-code"/></svg></div><h2 style="font-size:1.6rem">Programming in the language you need</h2><p>Your project may need more than a website. I can work in the language that suits it, and you do not have to pick one before we talk.</p>
+<div class="chips"><span class="chip">C++</span><span class="chip">Python</span><span class="chip">Java</span><span class="chip">JavaScript</span><span class="chip">HTML / CSS</span><span class="chip">and more on request</span></div></div></div></section>
+<section id="process">
+  <div class="wrap">
+    <div class="head"><h2>How we work together</h2><p class="lead">Four steps from first message to finished product.</p></div>
+    <ol class="grid steps">
+      <li class="card"><h3>Discuss the requirements</h3><p>Tell me what you want to build and who it is for.</p></li>
+      <li class="card"><h3>Agree on scope and quotation</h3><p>We confirm features and price before any work starts.</p></li>
+      <li class="card"><h3>Develop and review</h3><p>I build the project and you review it along the way.</p></li>
+      <li class="card"><h3>Deliver the final product</h3><p>You receive the agreed final product.</p></li>
+    </ol>
+  </div>
+</section>
+<section class="ctas"><div class="wrap"><div class="cta"><h2>Ready to take your business online?</h2><p class="lead">Tell me what you have in mind. Get a clear quotation before you decide to start.</p>
+<div class="row"><a class="btn p" href="#contact">Get a Free Quote</a><a class="btn g js-wa" href="#contact" target="_blank" rel="noopener">Message on WhatsApp</a></div></div></div></section>
+</div>
+<div class="page" data-page="portfolio" hidden>
+<section id="sec-portfolio">
+  <div class="wrap">
+    <div class="head"><h1>Sample project concepts</h1><p class="lead">Explore sample design concepts. These are demonstrations of possible layouts and features, not completed client projects or customer testimonials.</p></div>
+    <div class="grid work">
+      <!-- TO REPLACE WITH A REAL PROJECT: swap the <svg> inside .prev for <img src="your-screenshot.png" alt="...">,
+           change the tag text to "Live project", and update the title and description. -->
+      <article class="card proj">
+        <div class="prev"><svg viewBox="0 0 200 120" role="img" aria-label="Business website concept preview"><rect x="10" y="10" width="180" height="100" rx="8" fill="#0b0d1c" stroke="#fff" stroke-opacity=".15"/><rect x="22" y="22" width="40" height="5" rx="2.500" fill="#fff" opacity=".5"/><rect x="22" y="38" width="76" height="9" rx="4.500" fill="url(#g)"/><rect x="22" y="52" width="60" height="5" rx="2.500" fill="#fff" opacity=".3"/><rect x="22" y="64" width="34" height="12" rx="6" fill="url(#g)"/><rect x="112" y="34" width="66" height="44" rx="7" fill="url(#g)" opacity=".45"/><rect x="22" y="86" width="46" height="16" rx="4" fill="#fff" opacity=".08"/><rect x="74" y="86" width="46" height="16" rx="4" fill="#fff" opacity=".08"/><rect x="126" y="86" width="52" height="16" rx="4" fill="#fff" opacity=".08"/></svg></div>
+        <h3>Business Website</h3><p>A fast, mobile-friendly company site with services, contact details and a clear call to action.</p>
+      </article>
+      <article class="card proj">
+        <div class="prev"><svg viewBox="0 0 200 120" role="img" aria-label="Invoice generator concept preview"><rect x="52" y="8" width="96" height="104" rx="8" fill="#0b0d1c" stroke="#fff" stroke-opacity=".15"/><rect x="64" y="20" width="36" height="7" rx="3.500" fill="url(#g)"/><rect x="64" y="38" width="72" height="4" rx="2" fill="#fff" opacity=".3"/><rect x="64" y="48" width="72" height="4" rx="2" fill="#fff" opacity=".3"/><rect x="64" y="58" width="50" height="4" rx="2" fill="#fff" opacity=".3"/><path d="M64 74h72" stroke="#fff" stroke-opacity=".2"/><rect x="92" y="84" width="44" height="14" rx="7" fill="url(#g)"/><rect x="64" y="88" width="20" height="5" rx="2.500" fill="#fff" opacity=".4"/></svg></div>
+        <h3>Invoice Generator</h3><p>A simple web tool to enter items, calculate totals and prepare a printable invoice.</p>
+      </article>
+      <article class="card proj">
+        <div class="prev"><svg viewBox="0 0 200 120" role="img" aria-label="Restaurant website concept preview"><rect x="10" y="10" width="180" height="100" rx="8" fill="#0b0d1c" stroke="#fff" stroke-opacity=".15"/><circle cx="62" cy="60" r="34" fill="url(#g)" opacity=".4"/><circle cx="62" cy="60" r="22" fill="none" stroke="url(#g)" stroke-width="3"/><circle cx="62" cy="60" r="10" fill="url(#g)"/><rect x="112" y="30" width="62" height="7" rx="3.500" fill="#fff" opacity=".55"/><rect x="112" y="46" width="50" height="4" rx="2" fill="#fff" opacity=".3"/><rect x="112" y="56" width="58" height="4" rx="2" fill="#fff" opacity=".3"/><rect x="112" y="66" width="44" height="4" rx="2" fill="#fff" opacity=".3"/><rect x="112" y="82" width="40" height="12" rx="6" fill="url(#g)"/></svg></div>
+        <h3>Restaurant Website</h3><p>A menu-first layout with opening hours, location and an easy way to get in touch.</p>
+      </article>
+      <article class="card proj">
+        <div class="prev"><svg viewBox="0 0 200 120" role="img" aria-label="Productivity app concept preview"><rect x="10" y="10" width="180" height="100" rx="8" fill="#0b0d1c" stroke="#fff" stroke-opacity=".15"/><rect x="24" y="22" width="60" height="7" rx="3.500" fill="#fff" opacity=".55"/><circle cx="32" cy="48" r="6" fill="url(#g)"/><rect x="46" y="45" width="90" height="6" rx="3" fill="#fff" opacity=".35"/><circle cx="32" cy="68" r="6" fill="url(#g)"/><rect x="46" y="65" width="70" height="6" rx="3" fill="#fff" opacity=".35"/><circle cx="32" cy="88" r="6" fill="none" stroke="#fff" stroke-opacity=".4" stroke-width="1.500"/><rect x="46" y="85" width="80" height="6" rx="3" fill="#fff" opacity=".2"/><rect x="146" y="22" width="30" height="76" rx="6" fill="url(#g)" opacity=".4"/></svg></div>
+        <h3>Productivity Application</h3><p>A task and progress tracker designed to be quick to use on both phone and desktop.</p>
+      </article>
+    </div>
+  </div>
+</section>
+<section class="ctas"><div class="wrap"><div class="cta"><h2>Ready to take your business online?</h2><p class="lead">Tell me what you have in mind. Get a clear quotation before you decide to start.</p>
+<div class="row"><a class="btn p" href="#contact">Get a Free Quote</a><a class="btn g js-wa" href="#contact" target="_blank" rel="noopener">Message on WhatsApp</a></div></div></div></section>
+</div>
+<div class="page" data-page="contact" hidden>
+<section class="dom" aria-labelledby="dom-h"><div class="wrap">
+<p class="dom-kicker"><i aria-hidden="true"></i>Your name. Your website.</p>
+<h2 id="dom-h">Type the website name you want</h2>
+<label class="dom-box" for="domain">
+<svg class="dom-lock" viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg>
+<input id="domain" type="text" value="yourwebsite.com" aria-label="Your website name" aria-describedby="dom-hint" inputmode="url" autocapitalize="none" autocomplete="off" autocorrect="off" spellcheck="false" maxlength="40">
+<span class="dom-tap" aria-hidden="true">Tap to edit</span>
+</label>
+<p class="dom-hint" id="dom-hint">Replace <b>yourwebsite</b> with your own business name. It is added to your message below. This is only a preview: it does not check availability, and domain names are not included unless written in your quotation.</p>
+</div></section>
+<section id="sec-contact">
+  <div class="wrap contact">
+    <div>
+      <h1>Let’s Build Something That Works for Your Business.</h1>
+      <p class="lead">Have a business, an idea, or an existing website that needs improvement? Send a message and get a quotation based on your actual requirements.</p>
+      <div class="ways">
+        <a class="js-wa" href="#contact" target="_blank" rel="noopener"><small>WhatsApp</small><span>0303 9142955 (WhatsApp only, no calls)</span></a>
+        <a class="js-mail" href="#contact"><small>Email</small><span class="js-mail-text">your-email@example.com</span></a>
+      </div>
+    </div>
+    <form class="card" id="quote" novalidate aria-labelledby="fh">
+      <h3 id="fh" style="margin-bottom:.4rem">Let’s talk about your project</h3><p class="fine" style="margin:0 0 1.3rem">Share a few details and send your enquiry directly on WhatsApp or email.</p>
+      <div class="two">
+        <div class="fld"><label for="name">Your name</label><input id="name" name="name" type="text" autocomplete="name" required aria-describedby="e-name"><small class="err" id="e-name"></small></div>
+        <div class="fld"><label for="email">Email address</label><input id="email" name="email" type="email" autocomplete="email" required aria-describedby="e-email"><small class="err" id="e-email"></small></div>
+      </div>
+      <div class="two">
+        <div class="fld"><label for="service">Service</label>
+          <select id="service" name="service" required aria-describedby="e-service"><option value="">Choose a service</option><option>Website Development</option><option>Web Application Development</option><option>Android App Development</option><option>Website Redesign</option><option>UI/UX Design</option><option>Bug Fixing and Improvements</option><option>Not sure yet</option></select><small class="err" id="e-service"></small></div>
+        <div class="fld"><label for="budget">Budget</label>
+          <select id="budget" name="budget" required aria-describedby="e-budget"><option value="">Choose a budget</option><option>PKR 4,000 – 8,000</option><option>Above PKR 8,000</option><option>Not sure, I need a quote</option></select><small class="err" id="e-budget"></small></div>
+      </div>
+      <div class="fld"><label for="details">Project description</label><textarea id="details" name="details" required aria-describedby="e-details" placeholder="What do you want to build? Who is it for? Any features you need?"></textarea><small class="err" id="e-details"></small></div>
+      <div class="row"><button class="btn p" type="submit">Send on WhatsApp</button><button class="btn g" type="button" id="mailbtn">Send by Email</button></div>
+      <div class="status" id="status" role="status" aria-live="polite"></div>
+      <p class="fine">This form does not send data to a server. It opens WhatsApp or your email app with your details already written, and you press send there.</p>
+    </form>
+  </div>
+</section>
+
+</div>
+</main>
+<footer><div class="wrap"><div class="fgrid">
+<div><a class="brand" href="#home"><span>MOIN STUDIOZ</span></a><p>Websites, apps and marketing support for businesses that want to grow online.</p></div>
+<nav aria-label="Pages"><h3>Pages</h3><ul><li><a href="#home">Home</a></li><li><a href="#pricing">Pricing</a></li><li><a href="#portfolio">Portfolio</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<nav aria-label="Contact"><h3>Contact</h3><ul><li><a class="js-wa" href="#contact" target="_blank" rel="noopener">WhatsApp: 0303 9142955</a></li><li><a class="js-mail js-mail-text" href="#contact">moinstudioz@gmail.com</a></li></ul></nav>
+</div><div class="copy"><span>&copy; <span id="yr">2026</span> Moin Studioz. All rights reserved.</span><span>Designed &amp; Developed by Moin</span></div></div></footer>
+<script>
+
+/* ===================== CONFIGURE HERE =====================
+   whatsapp: your number in international format, digits only (no +, spaces or dashes).
+             Pakistan example: 0300 1234567 becomes "923001234567".
+   email:    your real email address.
+   Until you replace these, the form will tell visitors the contact option is not set up. */
+const CONFIG = {
+  whatsapp: "923039142955",            // 0303 9142955 in international format
+  email: "moinstudioz@gmail.com",
+  offerEnd: "2026-11-30T23:59:59+05:00" // <-- limited-time offer deadline (change this date)
+};
+/* ========================================================= */
+
+const $ = (s, r = document) => r.querySelector(s);
+const wa = CONFIG.whatsapp.replace(/\D/g, "");
+const waOk = /^\d{10,15}$/.test(wa);
+const mailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(CONFIG.email) && !/example\.com$/i.test(CONFIG.email);
+
+// Footer year
+$("#yr").textContent = new Date().getFullYear();
+
+// Mobile menu
+const burger = $(".burger"), menu = $("#menu");
+function setMenu(open) {
+  menu.classList.toggle("open", open);
+  burger.setAttribute("aria-expanded", open);
+  burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+}
+burger.addEventListener("click", () => setMenu(!menu.classList.contains("open")));
+menu.addEventListener("click", e => { if (e.target.closest("a")) setMenu(false); });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && menu.classList.contains("open")) { setMenu(false); burger.focus(); } });
+matchMedia("(min-width:960px)").addEventListener("change", e => { if (e.matches) setMenu(false); });
+
+// Contact links
+document.querySelectorAll(".js-wa").forEach(a => { if (waOk) a.href = "https://wa.me/" + wa; });
+document.querySelectorAll(".js-mail").forEach(a => { if (mailOk) a.href = "mailto:" + CONFIG.email; });
+document.querySelectorAll(".js-mail-text").forEach(a => { a.textContent = CONFIG.email; });
+
+// Big editable website name (contact page)
+const DOMAIN_DEFAULT = "yourwebsite.com", dom = $("#domain");
+if (dom) {
+  const box = dom.closest(".dom-box");
+  dom.addEventListener("focus", () => {
+    box.classList.add("touched");
+    if (dom.value === DOMAIN_DEFAULT) setTimeout(() => dom.setSelectionRange(0, DOMAIN_DEFAULT.indexOf(".")), 0);
+  });
+  dom.addEventListener("input", () => {
+    const raw = dom.value, pos = dom.selectionStart;
+    const clean = raw.toLowerCase().replace(/^https?:\/\//, "").replace(/[^a-z0-9.\-]/g, "");
+    if (clean !== raw) { dom.value = clean; const p = Math.max(0, pos - (raw.length - clean.length)); dom.setSelectionRange(p, p); }
+  });
+  dom.addEventListener("blur", () => { if (!dom.value.trim()) dom.value = DOMAIN_DEFAULT; });
+}
+
+if ($("#quote")) {
+// Form validation
+const form = $("#quote"), status = $("#status");
+const rules = {
+  name: v => v.trim().length >= 2 || "Enter your name.",
+  email: v => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim()) || "Enter a valid email address.",
+  service: v => !!v || "Choose a service.",
+  budget: v => !!v || "Choose a budget option.",
+  details: v => v.trim().length >= 15 || "Describe your project in at least 15 characters."
+};
+function validate() {
+  let first = null;
+  for (const k in rules) {
+    const f = form.elements[k], r = rules[k](f.value);
+    $("#e-" + k).textContent = r === true ? "" : r;
+    f.setAttribute("aria-invalid", r !== true);
+    if (r !== true && !first) first = f;
+  }
+  if (first) { first.focus(); say("Please fix the highlighted fields.", false); return false; }
+  return true;
+}
+form.addEventListener("input", e => { if (e.target.name) { $("#e-" + e.target.name).textContent = ""; e.target.removeAttribute("aria-invalid"); } });
+function say(t, ok) { status.textContent = t; status.className = "status " + (ok ? "ok" : "bad"); }
+
+// Build the inquiry text (encoded when placed in a URL)
+function inquiry() {
+  const d = Object.fromEntries(new FormData(form));
+  return "Hello Moin Studioz! I'd like to discuss a project.\n\n" +
+    "Name: " + d.name.trim() + "\nEmail: " + d.email.trim() + "\nService: " + d.service +
+    "\nBudget: " + d.budget + (dom && dom.value !== DOMAIN_DEFAULT ? "\nWebsite name: " + dom.value : "") + "\n\nProject details:\n" + d.details.trim();
+}
+
+// WhatsApp
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  if (!validate()) return;
+  if (!waOk) return say("WhatsApp contact is not set up yet. Please use the email option for now.", false);
+  window.open("https://wa.me/" + wa + "?text=" + encodeURIComponent(inquiry()), "_blank", "noopener");
+  say("WhatsApp opened with your message ready. Press send there to reach me.", true);
+});
+
+// Email
+$("#mailbtn").addEventListener("click", () => {
+  if (!validate()) return;
+  if (!mailOk) return say("Email contact is not set up yet. Please use the WhatsApp option for now.", false);
+  location.href = "mailto:" + CONFIG.email + "?subject=" + encodeURIComponent("Project inquiry: " + form.elements.service.value) + "&body=" + encodeURIComponent(inquiry());
+  say("Your email app should open with the message ready. Press send there to reach me.", true);
+});
+
+}
+
+// Limited-time offer countdown (deadline comes from CONFIG.offerEnd)
+const END = new Date(CONFIG.offerEnd).getTime();
+document.querySelectorAll("[data-offer-date]").forEach(e => {
+  e.textContent = new Date(END).toLocaleDateString("en-GB", { day: "numeric", month: "long", year: "numeric" });
+});
+const cds = document.querySelectorAll("[data-countdown]");
+function tick() {
+  const t = END - Date.now(), p = n => String(n).padStart(2, "0");
+  cds.forEach(e => {
+    e.textContent = t <= 0 ? "Offer ended. Message me for current pricing." :
+      Math.floor(t / 864e5) + "d " + p(Math.floor(t / 36e5) % 24) + "h " + p(Math.floor(t / 6e4) % 60) + "m " + p(Math.floor(t / 1e3) % 60) + "s";
+  });
+  if (t > 0) setTimeout(tick, 1000);
+}
+if (cds.length) tick();
+
+
+/* ===================== PAGE ROUTER (single-file site) ===================== */
+const PAGES = {"home":{title:"Moin Studioz | Grow Your Business Online with Websites and Apps",desc:"Meet Moin, the developer behind Moin Studioz. Websites, apps and social media marketing from PKR 4,000."},"pricing":{title:"Services and Pricing | Websites from PKR 4,000 | Moin Studioz",desc:"Website, app and marketing services with limited-time pricing: standard projects PKR 4,000 to 8,000, a 48-hour free fix window and social media marketing (your ad budget plus our fee)."},"portfolio":{title:"Portfolio | Moin Studioz",desc:"Sample project concepts: business website, invoice generator, restaurant website and productivity app."},"contact":{title:"Contact | Start Your Project | Moin Studioz",desc:"Tell Moin Studioz what you need. Message on WhatsApp or by email to get a free quote."}};
+(function () {
+  const pages = document.querySelectorAll(".page");
+  const links = document.querySelectorAll("#menu a:not(.btn), .fgrid nav a");
+  const descTag = document.querySelector('meta[name="description"]');
+  let current = null;
+  function show(first) {
+    let key = location.hash.replace(/^#\/?/, "");
+    const ALIAS = { services: "pricing", about: "home" };
+    if (ALIAS[key]) key = ALIAS[key];
+    if (!PAGES[key]) key = "home";
+    pages.forEach(p => { p.hidden = p.dataset.page !== key; });
+    document.title = PAGES[key].title;
+    descTag.setAttribute("content", PAGES[key].desc);
+    links.forEach(a => {
+      if (a.getAttribute("href") === "#" + key && a.closest("#menu")) a.setAttribute("aria-current", "page");
+      else a.removeAttribute("aria-current");
+    });
+    if (!first && key !== current) window.scrollTo(0, 0);
+    current = key;
+  }
+  window.addEventListener("hashchange", () => show(false));
+  const skip = document.querySelector(".skip");
+  if (skip) skip.addEventListener("click", e => { e.preventDefault(); const m = document.getElementById("main"); m.setAttribute("tabindex", "-1"); m.focus(); });
+  show(true);
+})();
+
+</script></body></html>
